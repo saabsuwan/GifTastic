@@ -12,19 +12,19 @@ ul li {
 .black-wrapper h4,
 .black-wrapper h5,
 .black-wrapper h6 {
-    color: #e3e3e3
+    color: red;
 }
 .black-wrapper .lead {
-    color: #9d9d9d
+    color:  red;
 }
 .black-wrapper a {
-    color: #FFF
+    color:  red;
 }
 .black-wrapper a:hover {
-    color: #72b6af
+    color:  red;
 }
 .color-wrapper {
-    background: #72b6af
+    background: red;
 }
 .color-wrapper p {
     color: #FFF

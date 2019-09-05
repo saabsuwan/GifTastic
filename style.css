@@ -1,0 +1,48 @@
+ul li {
+    display:inline;
+
+  }
+  .black-wrapper {
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+.black-wrapper h1,
+.black-wrapper h2,
+.black-wrapper h3,
+.black-wrapper h4,
+.black-wrapper h5,
+.black-wrapper h6 {
+    color: #e3e3e3
+}
+.black-wrapper .lead {
+    color: #9d9d9d
+}
+.black-wrapper a {
+    color: #FFF
+}
+.black-wrapper a:hover {
+    color: #72b6af
+}
+.color-wrapper {
+    background: #72b6af
+}
+.color-wrapper p {
+    color: #FFF
+}
+.inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.inner2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+ul {
+    padding: 0 0 0 18px
+}
+ol {
+    padding: 0 0 0 20px
+}
+img {
+    margin: 20px;
+}

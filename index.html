@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <link href="style.css" rel="stylesheet">
+  <link href="bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="black-wrapper">
+        <div class="container inner">
+          <div class="row">
+            <div class="col-md-3 col-sm-12">
+              <h3 class="section-title">What is your mode?</h3>
+              <div class="lead bm25">Find one from us now</div>
+              <div class="divide20"></div>
+              <button id="happy-button" type="button" class="btn btn-outline-success">Happy</button>
+              <button id="sad-button" type="button" class="btn btn-outline-success">Sad</button>
+              <button id="sleepy-button" type="button" class="btn btn-outline-success">Sleepy</button>
+              <button id="dead-button" type="button" class="btn btn-outline-success">Dead</button>
+
+            <div id="images" class="col-md-9 col-sm-12">
+              <ul class="photoset">˜
+                <li>
+                  <figure>
+                    <div id="images" >
+                      </figure>
+                </li>
+                <li>
+                    <figure>
+                        <div id="images">
+                          </figure>
+                </li>
+                <li>
+                    <figure>
+                        <div id="images">
+                          </figure>
+                </li>
+              </ul>
+              <!-- /.photoset --> 
+            </div>
+            <!-- /.col --> 
+          </div>
+          <!-- /.row --> 
+        </div>
+        <!-- /.container --> 
+      </div>
+      <!-- /.black-wrapper -->
+        
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      $("#happy-button").on("click", function() {
+
+      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=happy";
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+
+        .then(function(response) {
+
+          var imageUrl = response.data.image_original_url;
+
+          var happyImage = $("<img>");
+
+          happyImage.attr("src", imageUrl);
+          happyImage.attr("alt", "happy image");
+
+          $("#images").prepend(happyImage);
+        });
+    });
+
+    $("#sad-button").on("click", function() {
+
+var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=sad";
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+})
+
+  .then(function(response) {
+
+    var imageUrl = response.data.image_original_url;
+
+    var sadImage = $("<img>");
+
+    sadImage.attr("src", imageUrl);
+    sadImage.attr("alt", "sad image");
+
+    $("#images").prepend(sadImage);
+  });
+});
+
+
+$("#sleepy-button").on("click", function() {
+
+var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=sleepy";
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+})
+
+  .then(function(response) {
+
+    var imageUrl = response.data.image_original_url;
+
+    var sleepyImage = $("<img>");
+
+    sleepyImage.attr("src", imageUrl);
+    sleepyImage.attr("alt", "sleepy image");
+
+    $("#images").prepend(sleepyImage);
+  });
+});
+
+$("#dead-button").on("click", function() {
+
+var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&tag=dead";
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+})
+
+  .then(function(response) {
+
+    var imageUrl = response.data.image_original_url;
+
+    var deadImage = $("<img>");
+
+    deadImage.attr("src", imageUrl);
+    deadImage.attr("alt", "dead image");
+
+    $("#images").prepend(deadImage);
+  });
+});
+
+  </script>
+</body>
+
+</html>
